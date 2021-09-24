@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Donghoon's Site </title>
+    <link rel="stylesheet" href="myStyle.css">
 </head>
 <body>
     <header>
-        <h1>신동훈 HOME</h1>
+        <h1>
+            신동훈 HOME
+        </h1>
     </header>
     <nav>
         <ul>
@@ -23,7 +26,7 @@
             <img src=".\images\DSC07359.JPG" alt="">
             <h2>즐겨듣는 음악</h2>
             <audio src=".\media\music01.mp3" controls></audio>
-            <h2>북극곰을 살려주세요.</h2>
+            <h2 style="font-size: x-large; color: indigo;">북극곰을 살려주세요.</h2>
             <video src=".\media\movie.mp4" controls width="500" height="500"></video>
             <iframe width="894" height="503" src="https://www.youtube.com/embed/CKHHWJIR2Y4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <hr>
@@ -84,8 +87,16 @@
             <a href="#proflie">프로파일로 이동</a><br><hr>
         </div>
     </section>
+    <div id="iogin">
+        <form action="#" method="POST">
+            아이디   : <input type="text" name="id"><br>
+            비밀번호 : <input type="password" name="pw" id=""><br>
+            <input type="submit" value="로그인">
+            <input type="reset" value="취소">
+            <input type="checkbox" name="" id="">
+        </form>
+    </div>
     <aside>
-
     </aside>
     <footer>
         <div id="copywrite">tls5611@naver.com</div>
