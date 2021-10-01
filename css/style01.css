@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    font-size: 14px;
+}
+header, footer{
+    height: 100px; /*vh = 높이, vw = 길이*/
+    background: yellowgreen;
+    text-align/*글자위치*/: center;
+    font-size: 1.5em; /*em = 상위 컨테이너 font 사이즈의 배수개념*/
+    
+}
+article, aside, nav{
+    border: 1px solid gray;
+    /*height: 300px;*/
+    height: calc(100vh - 200px); /*화면크기에 맞춘 사이즈*/
+}
+section{
+    display: flex;
+}
+article{
+    flex: 7;
+}
+aside{
+    flex: 7;
+}
+nav{
+    flex: 1;
+    position: sticky;
+}

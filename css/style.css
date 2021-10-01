@@ -1,0 +1,19 @@
+.container{
+    background:gold;
+    left: 50px;
+    top :100px;
+    position: relative;
+}
+div{
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    background: red;
+    display: block;
+}
+.box{
+    background: pink; /*static, relative, absolute, fiexd, sticky*/ /*flex는 남는 공간을 어떻게 차지할 것인가에 대한 성질 */
+    top : 30px;
+    left : 50px;
+    position: sticky;
+}
