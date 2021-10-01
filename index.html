@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Welcome to Donghoon's Site </title>
     <link rel="stylesheet" href="myStyle.css">
+    <link rel="stylesheet" href="./css/w3.css"> <!--w3- 라고 하면 됨-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <style>
+        section{
+            display: flex;
+        }
+        .main{
+            flex: 4;
+        }
+        .right{
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>
-            신동훈 HOME
+        <h1 class="w3-text-indigo w3-xxlarge">
+         신동훈 HOME
         </h1>
     </header>
     <nav>
         <ul>
+            <!--
+             -->
             <li><a href="#">About</a></li>
+            <i href="#profile" class="fa fa-home" style='font-size:24px'></i>
             <li><a href="#profile">profile</a></li>
             <li><a href="#portfoilo">portfoilo</a></li>
             <li><a href="#contact">contact</a></li>
+            <i class="fas fa-camera" style='font-size:24px'></i>
         </ul>
     </nav>
     <section>
-        <div id="proflie">
+        <article class="main">
+        <div id="proflie"> 나의 사진 <br>
             <img src=".\images\DSC07359.JPG" alt="">
             <h2>즐겨듣는 음악</h2>
             <audio src=".\media\music01.mp3" controls></audio>
@@ -33,8 +52,8 @@
             <a href="https://www.naver.com/"></a>
             <br>
             <h2> My Profile</h2>
-            <table border="10">
-                <tr>
+            <table class="w3-table-all w3-hoverable">
+                <tr class="w3-indigo">
                     <th>년도</th>
                     <th>내용</th>
                     <th>비고</th>
@@ -79,25 +98,40 @@
         <hr>
         <div id="portfoilo"></div>
         <div id="contact"></div>
-        <div id="link">
-            <h2>즐겨찾는 사이트</h2>
+    </article>
+
+        <aside class="right">
+        <div id="link" >
+            <!--<h2 class="w3-bar w3-light-grey">즐겨찾는 사이트</h2> -->
+            <div class="w3-dropdown-hover">
+                <button class="w3-button">즐겨찾는 사이트</button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                  <a href="http://www.deu.ac.kr" target="_blank" class="w3-bar-item w3-button">동의대학교</a>
+                  <a href="http://www.google.com" class="w3-bar-item w3-button">구글</a>
+                  <a href="./start.html" class="w3-bar-item w3-button">연습문서</a>
+                  <a href="#proflie" class="w3-bar-item w3-button"> 프로파일</a>
+                  <a href="https://blog.naver.com/tls5611" class="w3-bar-item w3-button"> 네이버 블로그</a>
+                </div>
+              </div>
+              <!--
             <a href="http://www.deu.ac.kr" target="_blank" >동의대학교 <br>
             <a href="http://www.google.com">구글 <br></a></a>
             <a href="./start.html">연습문서</a><br>
             <a href="#proflie">프로파일로 이동</a><br><hr>
+            -->
         </div>
-    </section>
+
     <div id="iogin">
-        <form action="#" method="POST">
-            아이디   : <input type="text" name="id"><br>
-            비밀번호 : <input type="password" name="pw" id=""><br>
-            <input type="submit" value="로그인">
-            <input type="reset" value="취소">
-            <input type="checkbox" name="" id="">
+        <form action="#" method="POST" class="w3-container">
+            아이디   : <input class="w3-input w3-border w3-light-grey" type="text" name="id"><br>
+            비밀번호 : <input class="w3-input w3-border w3-light-grey" type="password" name="pw" id=""><br>
+            <input class="w3-btn w3-blue-grey"type="submit" value="로그인"> <!--로그인버튼-->
+            <input class="w3-btn w3-blue-grey"type="reset" value="취소">  <!--취소버튼-->
+         <!-- <input type="checkbox" name="" id=""> 체크박스-->   
         </form>
     </div>
-    <aside>
     </aside>
+    </section>
     <footer>
         <div id="copywrite">tls5611@naver.com</div>
         <div id="SNS"><a href="https://blog.naver.com/tls5611" target="_blank"> 네이버 블로그 
