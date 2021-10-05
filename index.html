@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <title> Welcome to Donghoon's Site </title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+  />
     <link rel="stylesheet" href="myStyle.css">
     <link rel="stylesheet" href="./css/w3.css"> <!--w3- 라고 하면 됨-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,6 +24,7 @@
         .right{
             flex: 1;
         }
+        
     </style>
 </head>
 <body>
@@ -29,20 +35,27 @@
     </header>
     <nav>
         <ul>
-            <!--
-             -->
-            <li><a href="#">About</a></li>
-            <i href="#profile" class="fa fa-home" style='font-size:24px'></i>
-            <li><a href="#profile">profile</a></li>
-            <li><a href="#portfoilo">portfoilo</a></li>
-            <li><a href="#contact">contact</a></li>
-            <i class="fas fa-camera" style='font-size:24px'></i>
+        <div class="icon-bar">
+            <a onClick="window.location.reload()"><i class="fas fa-home">Home</i></a> 
+            <a href="#profile"><i class="fas fa-portrait">Profile</i></a> 
+            <a href="#portfoilo"><i class="fas fa-id-card">Portfoilo</i></a> 
+            <a href="#contact"><i class="fas fa-file-contract">Contact</i></a>
+         <!--   <a href="#"><i class="fas fa-globe">globe</i></a> -->
+          </div>
         </ul>
+     <!-- <ul>          
+            <li><a href="#home" class="fas fa-home" style='font-size:40px' >home</a></li>
+            <li><a href="#profile"class="fas fa-portrait" style='font-size:40px'>profile</a></li>
+            <li><a href="#portfoilo" class="fas fa-id-card" style='font-size: 40px'>portfoilo</a></li>
+            <li><a href="#contact"class="fas fa-file-contract" style='font-size: 40px' >contact</a></li>
+        </ul> -->
     </nav>
     <section>
         <article class="main">
-        <div id="proflie"> 나의 사진 <br>
-            <img src=".\images\DSC07359.JPG" class="w3-border w3-padding" class="w3-display-bottomleft w3-container" alt="" height="750" width="1300">마운트쿡
+        <div id="proflie">           
+            <i class="fas fa-portrait" style="font-size: 30px; margin-left: 15px; margin-bottom: 5px;">Profile</i> 
+            <br>
+            <img src=".\images\DSC07359.JPG" class="w3-border w3-padding" class="w3-display-bottomleft w3-container" alt="" height="600" width="1000">
             <h2>즐겨듣는 음악</h2>
             <audio src=".\media\music01.mp3" controls></audio>
             <h2 style="font-size: x-large; color: indigo;">북극곰을 살려주세요.</h2>
@@ -51,7 +64,7 @@
             <hr>
             <a href="https://www.naver.com/"></a>
             <br>
-            <h2> My Profile</h2>
+            <h2> <i class="fas fa-id-card" style="font-size: 30px; margin-left: 15px; margin-bottom: 5px;">Portfoilo</i> </h2>
             <table class="w3-table-all w3-hoverable">
                 <tr class="w3-indigo">
                     <th>년도</th>
@@ -100,25 +113,18 @@
         <div id="contact"></div>
     </article>
 
-        <aside class="right">
+    <aside class="right">
         <div id="link" >
             <!--<h2 class="w3-bar w3-light-grey">즐겨찾는 사이트</h2> -->
             <div class="w3-dropdown-hover">
                 <button class="w3-button">즐겨찾는 사이트</button>
                 <div class="w3-dropdown-content w3-bar-block w3-card-4">
                   <a href="http://www.deu.ac.kr" target="_blank" class="w3-bar-item w3-button">동의대학교</a>
-                  <a href="http://www.google.com" class="w3-bar-item w3-button">구글</a>
-                  <a href="./start.html" class="w3-bar-item w3-button">연습문서</a>
-                  <a href="#proflie" class="w3-bar-item w3-button"> 프로파일</a>
-                  <a href="https://blog.naver.com/tls5611" class="w3-bar-item w3-button"> 네이버 블로그</a>
+                  <a href="http://www.google.com" target="_blank" class="w3-bar-item w3-button">구글</a>
+                  <a href="./start.html" target="_blank" class="w3-bar-item w3-button">연습문서</a>
+                  <a href="https://blog.naver.com/tls5611"target="_blank"  class="w3-bar-item w3-button"> 네이버 블로그</a>
                 </div>
               </div>
-              <!--
-            <a href="http://www.deu.ac.kr" target="_blank" >동의대학교 <br>
-            <a href="http://www.google.com">구글 <br></a></a>
-            <a href="./start.html">연습문서</a><br>
-            <a href="#proflie">프로파일로 이동</a><br><hr>
-            -->
         </div>
 
     <div id="iogin">
@@ -133,6 +139,8 @@
     </aside>
     </section>
     <footer>
+        <i class="fas fa-file-contract"style="font-size:30px; margin-left: 15px; margin-bottom: 5px;" >Contact</i>
+        <ul></ul>
         <div id="copywrite">tls5611@naver.com</div>
         <div id="SNS"><a href="https://blog.naver.com/tls5611" target="_blank"> 네이버 블로그 
         </a></div>

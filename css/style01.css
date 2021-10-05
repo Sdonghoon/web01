@@ -11,7 +11,6 @@ header, footer{
 }
 article, aside, nav{
     border: 1px solid gray;
-    /*height: 300px;*/
     height: calc(100vh - 200px); /*화면크기에 맞춘 사이즈*/
 }
 section{
@@ -27,3 +26,5 @@ nav{
     flex: 1;
     position: sticky;
 }
+
+  
