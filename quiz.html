@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun1() {
+            let x = parseInt(document.getElementById("x").value);
+            let y = parseInt(document.getElementById("y").value);
+            //let text = x + "+" + y + "=" + (x+y) +"<br>";
+            //    text += x + "**" + y + "=" + (x**y) + "<br>";
+            let text =`${x} + ${y} = ${x+y} <br>`;
+                text +=`${x} ** ${y} = ${x**y} <br>`;
+                text +=`${x} % ${y} = ${x%y} <br>`;
+                document.getElementById("result").innerHTML = text;
+                
+        }
+        function fun2() {
+            let score = parseInt(prompt("당신의 점수 입력", 100));
+            let text = '';
+            let grade = '';
+            if(score >= 90)
+            {
+                grade = 'A';
+            }
+            else if(score >= 80)
+            {
+                grade = 'B';
+            }
+            else if(score >= 70)
+            {
+                grade = 'C';
+            }
+            else{
+                grade = 'F';
+            }
+            if(score >= 60)
+            {
+                text = `당신의 점수 : ${score} 학점 : ${grade} 합격입니다.`;
+                
+            }
+            else 
+            {
+                text = `당신의 점수 : ${score} 학점 : ${grade} 불합격입니다.`;
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+        function fun3() {
+            let sum = 0;
+            for(let i = 0; i <= 100; i++)
+            {
+                sum += i;                
+            }
+            let text = `1~100까지의 합은 = ${sum} 입니다.`;
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</head>
+<body>
+    <input type="text" name="" id="x"><br>
+    <input type="text" name="" id="y"><br>
+    <button onclick="fun1();"> 연산 결과 </button>
+    <button onclick="fun2();"> 성적 확인 </button>
+    <button onclick="fun3();"> 계산 확인 </button>
+    <div id="result">
+
+    </div>
+    <script>
+       /* let a = eval(prompt("수식을 입력하세요",0));
+        document.write("<h1> eval()를 이용한 값</h1>");
+        document.write(a);
+        document.getElementById("result").innerHTML = (a); 
+        */
+    </script>
+</body>
+</html>
