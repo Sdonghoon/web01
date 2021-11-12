@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/w3.css">
+    <title>Document</title>
+    <script>
+          /* const mul = function(x, y){
+               return x*y;
+           }              
+           //alert(mul(7, 10));  
+           const mul1 = (x, y) => { return x*y;}  
+           alert(mul1(9, 8)); */
+           //alert(f(5));
+           function f(x){
+               fact = 1;
+               for(let i=1; i <= x; i++){
+                   fact *= i;
+               }
+               return fact;
+           }
+           
+           //2. anonymout function
+           const f1 = function(x){
+            fact = 1;
+               for(let i=1; i <= x; i++){
+                   fact *= i;
+               }
+               return fact;
+           }
+           //alert('2=>' + f1(6));
+           //3. arrow function
+           const f2 = (x)=>{
+            fact = 1;
+               for(let i=1; i <= x; i++){
+                   fact *= i;
+               }
+               return fact;
+           }
+           //alert('3=>' + f2(10));
+           function login(){
+               let id = document.getElementById("id").value;
+               let pw = document.getElementById("pw").value;
+               if(id==="admin"){
+                   if(pw=="1234"){
+                       document.getElementById("login").innerHTML="<h2>" + id + 
+                          "님이 로그인하였습니다 </h2>"; 
+                   } else {
+                       alert("비밀번호를 확인하세요");
+                   }
+               }else{
+                   alert("회원가입을 하세요");
+               }
+           }
+           function w3_open(){
+               document.getElementById("mySidebar").style.display = "block";
+           }
+           function w3_close(){
+               document.getElementById("mySidebar").style.display = "none";
+           }
+           let data = [["홍길동", "./images/photo1.jpg", 5000],
+                    ["이순신", "./images/photo2.jpg", 10000],
+                    ["성춘향", "./images/photo3.jpg", 15000],
+                    ["최동원", "./images/photo4.jpg", 5000]]
+           function productList() {
+            
+            let text= "";
+            text = `<table class = "w3-table-all w3-hoverable"><tr class = "w3-indigo"><th> 작가명 </th> <th> 작품명 </th> <th> 가격 </th></tr>`;
+                for(let i = 0; i < data.length; i++){
+                    text += `<tr><td>${data[i][0]}</td><td><img src = ${data[i][1]} alt ="my lmage"></td><td>${data[i][2]}</td></tr>`;     
+                }
+            text += `</table>`;
+            document.getElementById("productList").innerHTML = text;
+           }
+           function fileUpload() {
+               let a = new Array();
+               let author = document.getElementById("author").value;
+               let file = "./images/" + document.getElementById("file").files[0].name;
+               let price = parseInt(document.getElementById("price").value);
+               a[0] = author;
+               a[1] = file;
+               a[2] = price;
+               data.push(a);
+               console.log(data);
+           }
+           function popup() {
+               //window.open("팝업소스파일", "별명", "스타일설정");
+               window.open("week11.html", "event", "width = 300, height = 400, scrollbars = yes");
+           }
+    </script>
+</head>
+
+<body onload="productList(); popup();">
+    <header>
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-bar-block	w3-border-right" style="display:none" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">Link 1</a>
+            <a href="#" class="w3-bar-item w3-button">Link 2</a>
+            <a href="#" class="w3-bar-item w3-button">Link 3</a>
+        </div>
+        <div class="w3-indigo">
+            <button class="w3-button w3-indigo w3-xlarge" onclick="w3_open()">☰</button>
+            <span class="w3-xlarge"> Seongwon Site</span>
+        </div>
+
+    </header>
+    <section>
+        <div id="login" class="w3-container">
+            <h3> 로그인 </h3>
+            회원ID :
+            <input type="text" name="" id="id"><br>
+            비밀번호 :
+            <input type="password" name="" id="pw"><br>
+            <button onclick="login();">로그인</button><button onclick="cancel();">취소</button>
+        </div>
+        <div id="demo" class="w3-container">
+            <h2 class="w3-center"> 상품리스트 </h2>
+            <div id="productList">
+                
+            </div>
+            </table>
+        </div>
+        <div class="w3-container">
+            <h2>  상품 등록</h2>
+            저자명 : <input class="w3-input" type="text" name="" id="author"> <br>
+            사진 : <input class="w3-input" type="file" name="" id="file"> <br>
+            가격 : <input class="w3-input" type="text" name="" id="price"> <br>
+            <button class= "w3-button w3-blue" onclick="fileUpload();"> 상품등록</button>
+            <button class= "w3-button w3-blue" onclick="productList();"> 상품리스트</button>
+      </div>
+    </section>
+
+</body>
+
+</html>

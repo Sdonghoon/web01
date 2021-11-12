@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function listyle() {
+            document.getElementById("s").style.backgroundColor = "red";
+            let x = document.getElementsByTagName("li");
+            for(let i = 0 ; i < x.length; i++)
+            {
+                x[i].style.color = "blue";
+            }
+
+        }
+    </script>
+</head>
+<body onload="listyle();">
+    <h3 id="s">겨울방학 이벤트</h3>
+    <ol id="list">
+        <li>제주도 여행</li>
+        <li>프로그래밍 공부</li>
+        <li>토익점수 200점 올리기</li>
+        <li>사진배우기</li>
+    </ol>
+    <img src="./images/photo4.jpg"> <br>
+    <button onclick="window.close()"> 닫기 </button>
+</body>
+</html>

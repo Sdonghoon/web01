@@ -8,4 +8,5 @@ console.log(b);
 b = 50;
 console.log(b);
 
+let c = new Array(1,2,3,4,5);
 
